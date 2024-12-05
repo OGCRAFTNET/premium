@@ -1,0 +1,152 @@
+/* Allgemeine Einstellungen */
+:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --accent-color: #1db954;
+    --error-color: #e63946;
+    --header-color: #1c1c1c;
+    --footer-color: #141414;
+    --card-color: #1e1e1e;
+    --highlight-color: #1f9d8a;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--header-color);
+    padding: 20px 20px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.server-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+}
+
+#server-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.header-main {
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Rundes Profilbild */
+    margin: 0 auto 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    animation: fade-in 1s ease-in-out;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--highlight-color), var(--accent-color));
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    animation: fade-slide-in 0.8s ease-out;
+}
+
+.announcements {
+    display: grid;
+    gap: 20px;
+}
+
+.announcement {
+    background-color: var(--card-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.announcement h3 {
+    margin: 0 0 10px;
+    color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--footer-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+.link-tab {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.link-tab a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.link-tab a:hover {
+    color: var(--highlight-color);
+}
+
+/* Animationen */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
