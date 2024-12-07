@@ -1,5 +1,5 @@
 // Serverstatus prüfen
-const serverIP = "ogcraftnet.playit.gg";
+const serverIP = "mc.ogcraftnet.playit.gg";
 const serverIndicator = document.getElementById("server-indicator");
 const serverStatusText = document.getElementById("server-status-text");
 
